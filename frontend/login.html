@@ -41,27 +41,21 @@
     <div class="auth-divider"><span>OR</span></div>
 
     <!-- FORM -->
-    <form id="loginForm">
+   <form id="loginForm">
+  <input type="email" id="email" placeholder="Email" required>
 
-  <input
-    type="email"
-    id="loginEmail"
-    placeholder="Email"
-    required
-  />
+  <div class="password-field">
+    <input type="password" id="password" placeholder="Password" required>
+    <span class="eye">👁</span>
+  </div>
 
-  <input
-    type="password"
-    id="loginPassword"
-    placeholder="Password"
-    required
-  />
   <a href="forgot-password.html" class="auth-link">Forgot password?</a>
-  <button type="submit" class="btn-auth-primary">
-    Log in
-  </button>
 
+  <button type="submit" class="btn-auth-primary">
+    Log in with email
+  </button>
 </form>
+
 
 
     <p class="auth-footer">
@@ -72,5 +66,16 @@
   </div>
 </div>
 <script src="js/auth.js"></script>
+<script>
+document.querySelector("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // TEMP MOCK — replace with fetch later
+  localStorage.setItem("token", "mock-jwt-token");
+
+  window.location.href = "dashboard.html";
+});
+</script>
+
 </body>
 </html>

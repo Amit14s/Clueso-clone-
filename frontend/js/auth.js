@@ -18,32 +18,42 @@ function togglePassword(el) {
 }
 
 /* ================= LOGIN ================= */
-const loginForm = document.getElementById("loginForm");
-if (loginForm) {
-  loginForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
 
-    try {
-      const res = await fetch(`${API_BASE}/auth/login`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: loginEmail.value,
-          password: loginPassword.value
-        })
-      });
+document.getElementById("loginForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
 
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.message);
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
-      saveToken(data.token);
-      window.location.href = "index.html";
+  try {
+    const res = await fetch("http://localhost:5000/api/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ email, password })
+    });
 
-    } catch (err) {
-      showError(err.message || "Login failed");
+    const data = await res.json();
+
+    if (!res.ok) {
+      alert(data.message || "Login failed");
+      return;
     }
-  });
-}
+
+    // ✅ SAVE TOKEN
+    localStorage.setItem("token", data.token);
+    localStorage.setItem("user", JSON.stringify(data.user));
+
+    // ✅ REDIRECT
+    window.location.href = "dashboard.html";
+
+  } catch (err) {
+    alert("Server error. Try again.");
+  }
+});
+
+
 
 /* ================= SIGNUP ================= */
 const signupForm = document.getElementById("signupForm");

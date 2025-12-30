@@ -1,0 +1,157 @@
+body {
+  font-family: Inter, sans-serif;
+  background: #f9fafb;
+  color: #111;
+}
+
+/* LAYOUT */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar-logo img {
+  width: 36px;
+  margin-bottom: 32px;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+}
+
+.sidebar-nav li.active,
+.sidebar-nav li:hover {
+  background: #f3f4f6;
+  font-weight: 600;
+}
+
+.logout-btn {
+  margin-top: auto;
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  padding: 32px;
+}
+
+/* TOPBAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  margin-left: 30px;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background: #e879f9;
+  color: #fff;
+}
+
+.btn.ghost {
+  background: #f3f4f6;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: #fff;
+  height: 200px;
+  margin-top: 28px;
+  margin-right: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.stat-card p {
+  font-size: 34px;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-left: 80px;
+}
+
+/* CONTENT */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: #f6cceb;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+}
+
+.card.full {
+  grid-column: span 2;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list li {
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+/* AI */
+.ai-box {
+  background: #aad3ea;
+  border: 1px dashed #d1d5db;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.page-section {
+  display: none;
+}
+
+.page-section.active {
+  display: block;
+}

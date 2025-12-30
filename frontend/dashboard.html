@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard – Clueso</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Existing CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+
+  <!-- Dashboard CSS -->
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+<!--  LAYOUT  -->
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="https://img.propelauth.com/e44306f6-f323-4d22-a673-2f0d54e096ec_c89b257e-e14d-465c-becc-35d8483114e5.png" alt="Clueso">
+    </div>
+
+  <nav class="sidebar-nav">
+  <ul>
+    <li class="active" data-section="dashboard">Dashboard</li>
+    <li data-section="videos">My Videos</li>
+    <li data-section="feedback">Feedback</li>
+    <li data-section="ai">AI Insights</li>
+    <li data-section="settings">Settings</li>
+  </ul>
+</nav>
+
+
+
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </aside>
+
+  <!-- MAIN -->
+ <section class="content-grid">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <h1>Welcome back 👋</h1>
+      <button class="btn primary">Create New Video</button>
+    </header>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stat-card">
+        <h3 style="margin-left: 30px;margin-top: 30px;">Videos Created</h3>
+        <p>12</p>
+      </div>
+      <div class="stat-card">
+        <h3 style="margin-left: 35px;margin-top: 27px;">Feedback Collected</h3>
+        <p>34</p>
+      </div>
+      <div class="stat-card">
+        <h3 style="margin-left: 35px;margin-top: 30px;">Avg Rating</h3>
+        <p> 4.6 ⭐ </p>
+      </div>
+    </section>
+
+    <!-- CONTENT GRID -->
+    <section class="content-grid">
+
+      <!-- RECENT VIDEOS -->
+      <div class="card">
+        <h2>Recent Videos</h2>
+
+        <ul class="list">
+          <li>📹 Product Walkthrough</li>
+          <li>📹 Onboarding Guide</li>
+          <li>📹 Feature Release Demo</li>
+        </ul>
+      </div>
+
+      <!-- FEEDBACK -->
+      <div class="card">
+        <h2>Latest Feedback</h2>
+
+        <ul class="list">
+          <li>⭐ 5 – Very easy to use</li>
+          <li>⭐ 4 – Great captions</li>
+          <li>⭐ 5 – Saves lots of time</li>
+        </ul>
+      </div>
+
+      <!-- AI SUMMARY -->
+      <div class="card full">
+        <h2>AI-Powered Summary</h2>
+        <p class="ai-box" id="aiSummary">
+          Click below to generate insights from feedback.
+        </p>
+        <button class="btn ghost" onclick="generateAI()">Generate AI Summary</button>
+      </div>
+
+    </section>
+
+ </section>
+
+</div>
+
+<!--JS  -->
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
