@@ -1,0 +1,289 @@
+/* ================= BASE ================= */
+body {
+  font-family: var(--font-main);
+  color: var(--color-text-main);
+  background: var(--color-bg);
+}
+
+/* Sections only control vertical spacing */
+.section {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+/* Global container: THIS defines page margins */
+.container {
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid var(--color-border);
+  z-index: 100;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 16px;
+}
+
+/* ================= HERO ================= */
+.hero {
+  background: #fff;
+}
+
+/* container already aligns text + video */
+.hero-container {
+  display: block;
+}
+
+.hero-text {
+  max-width: 640px;
+  text-align: left;
+  margin-bottom: 48px;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #111;
+}
+
+.hero-title-muted {
+  font-weight: 700;
+  color: #9ca3af;
+}
+
+.hero-sub {
+  margin-top: 16px;
+  color: var(--color-text-muted);
+}
+
+.hero-actions {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+}
+
+/* ================= HERO VIDEO ================= */
+.hero-video {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  background: radial-gradient(
+    circle at center,
+    #fce7f3 0%,
+    transparent 70%
+  );
+  padding-bottom: 40px;
+}
+
+.hero-video-frame {
+  width: 100%;
+  max-width: 1100px;
+  height: 520px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
+}
+
+.hero-video-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= TRUSTED BY GRID ================= */
+/* ================= TRUSTED HEADER ALIGNMENT ================= */
+
+.trusted-header {
+  max-width: var(--container-width);
+  margin: 0 auto 32px auto;   /* center horizontally + space below */
+  display: flex;
+  align-items: center;
+  justify-content: center;    /* center the whole group */
+  gap: 12px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.trusted-header img {
+  height: 22px;
+  display: block;
+}
+
+/* ================= LOGO GRID CARD ================= */
+
+.logo-card {
+  position: relative;
+  height: 140px;
+  overflow: hidden;
+  background: #fff;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* FRONT LOGO */
+.logo-front {
+  z-index: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.logo-front img {
+  max-width: 120px;
+  opacity: 0.9;
+}
+
+/* HOVER PANEL */
+.logo-hover {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+
+  background: #fff;
+  padding: 18px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  transform: translateY(100%);
+  transition: transform 0.35s ease;
+
+  text-align: left;
+}
+
+.logo-hover h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.logo-hover p {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.logo-hover span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #7c3aed; /* Clueso-like accent */
+}
+
+/* HOVER EFFECT */
+.logo-card:hover .logo-hover {
+  transform: translateY(0);
+}
+
+.logo-card:hover .logo-front {
+  opacity: 0;
+  transform: scale(0.95);
+}
+/* ================= LOGO GRID ================= */
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  border: 1px solid var(--color-border); /* outer border */
+}
+
+/* ================= SECTION HEADINGS ================= */
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.section-sub {
+  color: var(--color-text-muted);
+  margin-bottom: 40px;
+}
+
+/* ================= BUILT FOR YOU ================= */
+.built-container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+}
+
+.built-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.built-video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+}
+
+/* ================= INTERACTIVE EDITOR ================= */
+.editor-wrapper {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+}
+
+.editor-display {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.editor-video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: var(--color-bg-soft);
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footer-copy {
+  margin-top: 40px;
+  text-align: center;
+  color: var(--color-text-muted);
+}

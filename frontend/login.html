@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login – Clueso</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Existing CSS -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/components.css">
+
+  <!-- Auth CSS -->
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body>
+
+<div class="auth-page">
+  <div class="auth-card">
+
+    <!-- LOGO -->
+    <a href="index.html" class="auth-logo">
+      <img src="https://img.propelauth.com/e44306f6-f323-4d22-a673-2f0d54e096ec_c89b257e-e14d-465c-becc-35d8483114e5.png" alt="Clueso">
+    </a>
+
+    <h1>Log in to Clueso</h1>
+
+    <!-- GOOGLE / SSO -->
+    <button class="auth-btn google">
+      <img src="assets/google.png" alt="">
+      Sign in with Google
+    </button>
+
+    <button class="auth-btn sso">
+      🔑 Sign in with SSO
+    </button>
+
+    <div class="auth-divider"><span>OR</span></div>
+
+    <!-- FORM -->
+    <form>
+      <input type="email" placeholder="Email" required>
+
+      <div class="password-field">
+        <input type="password" placeholder="Password" required>
+        <span class="eye">👁</span>
+      </div>
+
+      <a href="forgot-password.html" class="auth-link">Forgot password?</a>
+
+      <button type="submit" class="btn-auth-primary">
+        Log in with email
+      </button>
+    </form>
+
+    <p class="auth-footer">
+      Don't have an account?
+      <a href="signup.html">Sign up</a>
+    </p>
+
+  </div>
+</div>
+
+</body>
+</html>
