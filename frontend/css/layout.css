@@ -287,3 +287,231 @@ body {
   text-align: center;
   color: var(--color-text-muted);
 }
+.language-pills span.active {
+  background: #e879f9;
+  color: #fff;
+  border-color: #e879f9;
+}
+.testimonial h2 {
+  color: #9ca3af;
+  transition: color 0.6s ease;
+}
+.testimonial h2.active {
+  color: #111;
+}
+.navbar.scrolled {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.dropdown {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+.dropdown.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* FAQ */
+.faq-answer {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+.faq-icon {
+  font-size: 22px;
+  color: #e879f9;
+}
+
+/* ================= TESTIMONIAL ================= */
+.testimonial h2 {
+  font-size: 54px;
+  line-height: 1.15;
+  font-weight: 800;
+  max-width: 980px;
+  margin: 0 auto 24px auto;
+  color: #9ca3af;
+  transition: color 0.6s ease;
+}
+
+.testimonial h2.active {
+  color: #111;
+}
+
+.testimonial-user {
+  font-size: 16px;
+  color: var(--color-text-muted);
+}
+/* ================= MAJOR VIDEO EDITS ================= */
+.major-edits .tag {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+.major-edits h2 {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.major-edits p {
+  font-size: 18px;
+  color: var(--color-text-muted);
+  max-width: 720px;
+  margin-bottom: 40px;
+}
+
+.edit-feature h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.edit-feature p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+/* ================= STEPS ================= */
+.steps h2 {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 48px;
+}
+
+.step-card {
+  padding: 28px 24px;
+}
+
+.step-no {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.step-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.step-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+/* ================= MORE FEATURES ================= */
+.more-features h2 {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 48px;
+}
+
+.feature-box {
+  padding: 32px;
+}
+
+.feature-box h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.feature-box p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+.built-for-you .section-title {
+  font-size: 44px;
+  font-weight: 800;
+}
+
+.built-for-you .section-sub {
+  font-size: 18px;
+  max-width: 720px;
+}
+/* Testimonial scroll color animation */
+.testimonial h2 {
+  color: #9ca3af; /* grey */
+  transition: color 0.8s ease;
+}
+
+.testimonial h2.in-view {
+  color: #111; /* black */
+}
+.language-pills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.language-pills button {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.language-pills button.active {
+  background: #e879f9;
+  color: #fff;
+  border-color: #e879f9;
+}
+.translate-demo {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.translate-video video {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.translate-steps {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+.translate-steps ol {
+  padding-left: 20px;
+}
+
+.translate-steps li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.account-link {
+  cursor: pointer;
+  font-weight: 500;
+}
+.nav-item {
+  position: relative;
+}
+
+.dropdown {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+.dropdown.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}

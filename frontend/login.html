@@ -29,10 +29,10 @@
     <h1>Log in to Clueso</h1>
 
     <!-- GOOGLE / SSO -->
-    <button class="auth-btn google">
-      <img src="assets/google.png" alt="">
-      Sign in with Google
-    </button>
+    <button class="auth-btn google-auth">
+  <img src="assets/google.png"> Continue with Google
+</button>
+
 
     <button class="auth-btn sso">
       🔑 Sign in with SSO
@@ -41,20 +41,28 @@
     <div class="auth-divider"><span>OR</span></div>
 
     <!-- FORM -->
-    <form>
-      <input type="email" placeholder="Email" required>
+    <form id="loginForm">
 
-      <div class="password-field">
-        <input type="password" placeholder="Password" required>
-        <span class="eye">👁</span>
-      </div>
+  <input
+    type="email"
+    id="loginEmail"
+    placeholder="Email"
+    required
+  />
 
-      <a href="forgot-password.html" class="auth-link">Forgot password?</a>
+  <input
+    type="password"
+    id="loginPassword"
+    placeholder="Password"
+    required
+  />
+  <a href="forgot-password.html" class="auth-link">Forgot password?</a>
+  <button type="submit" class="btn-auth-primary">
+    Log in
+  </button>
 
-      <button type="submit" class="btn-auth-primary">
-        Log in with email
-      </button>
-    </form>
+</form>
+
 
     <p class="auth-footer">
       Don't have an account?
@@ -63,6 +71,6 @@
 
   </div>
 </div>
-
+<script src="js/auth.js"></script>
 </body>
 </html>
