@@ -81,15 +81,29 @@
       </div>
 
       <!-- FEEDBACK -->
-      <div class="card">
-        <h2>Latest Feedback</h2>
+      <div class="page-section" id="feedback">
 
-        <ul class="list">
-          <li>⭐ 5 – Very easy to use</li>
-          <li>⭐ 4 – Great captions</li>
-          <li>⭐ 5 – Saves lots of time</li>
-        </ul>
-      </div>
+  <h2>Submit Feedback</h2>
+
+  <form id="feedbackForm" class="feedback-form">
+    <select id="rating" required>
+      <option value="">Rating</option>
+      <option value="5">⭐ 5 - Excellent</option>
+      <option value="4">⭐ 4 - Good</option>
+      <option value="3">⭐ 3 - Average</option>
+      <option value="2">⭐ 2 - Poor</option>
+      <option value="1">⭐ 1 - Bad</option>
+    </select>
+
+    <textarea id="message" placeholder="Your feedback..." required></textarea>
+
+    <button type="submit" class="btn primary">Submit</button>
+  </form>
+
+  <h3>Previous Feedback</h3>
+  <ul id="feedbackList" class="feedback-list"></ul>
+
+</div>
 
       <!-- AI SUMMARY -->
       <div class="card full">

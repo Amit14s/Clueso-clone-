@@ -19,7 +19,9 @@ function togglePassword(el) {
 
 /* ================= LOGIN ================= */
 
-document.getElementById("loginForm").addEventListener("submit", async function (e) {
+const loginForm = document.getElementById("loginForm");
+  if(loginForm){
+    loginForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const email = document.getElementById("email").value;
@@ -52,13 +54,13 @@ document.getElementById("loginForm").addEventListener("submit", async function (
     alert("Server error. Try again.");
   }
 });
-
+  }
 
 
 /* ================= SIGNUP ================= */
 const signupForm = document.getElementById("signupForm");
-if (signupForm) {
-  signupForm.addEventListener("submit", async (e) => {
+  if(signupForm){
+    signupForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     try {
@@ -74,15 +76,19 @@ if (signupForm) {
 
       const data = await res.json();
       if (!res.ok) throw new Error(data.message);
+  // ✅ SAVE TOKEN
+    localStorage.setItem("token", data.token);
+    localStorage.setItem("user", JSON.stringify(data.user));
 
-      saveToken(data.token);
-      window.location.href = "index.html";
+    // ✅ REDIRECT
+    window.location.href = "dashboard.html";
 
     } catch (err) {
       showError(err.message || "Signup failed");
     }
   });
-}
+  }
+
 
 /* ================= FORGOT PASSWORD ================= */
 const forgotForm = document.getElementById("forgotForm");
