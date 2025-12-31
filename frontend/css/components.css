@@ -229,3 +229,37 @@
   color: var(--color-text-muted);
   line-height: 1.4;
 }
+.testimonial {
+  padding: 80px 0;
+}
+
+.scroll-words {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+.testimonial-author {
+  margin-top: 16px;
+  color: #6b7280;
+  font-size: 14px;
+}
+.scroll-words {
+  text-align: left;
+  line-height: 1.05;
+  max-width: 1000px;     /* limits the text width */
+  margin: 0 auto;       
+  padding: 0 16px;     
+  font-size: 40px;
+  overflow-wrap: break-word;
+} 
+
+
+.scroll-words span {
+  color: #9ca3af;                 /* grey */
+  transition: color 0.35s ease;   /* smooth fade */
+}
+
+.scroll-words span.active {
+  color: #111;                    /* black */
+}

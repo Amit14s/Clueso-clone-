@@ -57,3 +57,39 @@ if (testimonialHeading) {
 
   observer.observe(testimonialHeading);
 }
+
+
+const textEl = document.getElementById("empowerText");
+
+// 1. Split text into words
+const words = textEl.innerText.split(" ");
+textEl.innerHTML = words
+  .map(word => `<span>${word}&nbsp;</span>`)
+  .join("");
+
+const spans = Array.from(textEl.querySelectorAll("span"));
+
+function updateWordColors() {
+  const rect = textEl.getBoundingClientRect();
+  const viewportHeight = window.innerHeight;
+
+  // Progress from 0 → 1 as text moves through viewport
+  const progress = 1 - Math.min(
+    Math.max((rect.top - viewportHeight * 0.3) / (viewportHeight * 0.4), 0),
+    1
+  );
+
+  const activeWords = Math.floor(progress * spans.length);
+
+  spans.forEach((span, index) => {
+    if (index < activeWords) {
+      span.classList.add("active");
+    } else {
+      span.classList.remove("active");
+    }
+  });
+}
+
+// Listen to scroll
+window.addEventListener("scroll", updateWordColors);
+window.addEventListener("load", updateWordColors);

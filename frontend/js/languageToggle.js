@@ -13,29 +13,30 @@ document.addEventListener("DOMContentLoaded", () => {
 const translations = {
   en: {
     text: "Make the world your audience. Translate your voiceover, captions, and documentation in one click.",
-    video: "https://vimeo.com/1083881529?fl=pl&fe=sh"
+    videoId: "1083881529"
   },
   es: {
     text: "Haz del mundo tu audiencia. Traduce tu voz, subtítulos y documentación con un clic.",
-    video: "https://vimeo.com/1083880549?fl=pl&fe=sh"
+    videoId: "1083881529"
   },
   de: {
     text: "Machen Sie die Welt zu Ihrem Publikum. Übersetzen Sie Voiceover, Untertitel und Dokumentation mit einem Klick.",
-    video: "https://vimeo.com/1083880688?fl=pl&fe=sh"
+    videoId: "1083880688"
   },
   ja: {
     text: "ワンクリックでナレーション、字幕、ドキュメントを翻訳します。",
-    video: "https://vimeo.com/1083880579?fl=pl&fe=sh"
+    videoId: "1083880579"
   },
   hi: {
     text: "एक क्लिक में वॉइसओवर, कैप्शन और दस्तावेज़ का अनुवाद करें।",
-    video: "https://vimeo.com/1083880507?fl=pl&fe=sh"
+    videoId: "1083880507"
   },
   ar: {
     text: "اجعل العالم جمهورك. ترجم التعليق الصوتي والتسميات التوضيحية والمستندات بنقرة واحدة.",
-    video: "https://vimeo.com/1083880639?fl=pl&fe=sh"
+    videoId: "1083880639"
   }
 };
+
 
 const langButtons = document.querySelectorAll(".language-pills .lang");
 const translateText = document.getElementById("translateText");
